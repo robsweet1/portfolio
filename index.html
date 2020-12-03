@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Robert Sweet</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="app.css">
+  <script defer src="scripts.js"></script>
+
+</head>
+<body id='home'>
+    <nav class="flex-box nav">
+        <h1 class="brand-logo">Robert Sweet</h1>
+        <div class="flex-box btn-container">
+            <a href='#home'>Home</a>
+            <a href='#projects'>Projects</a>
+        </div>
+    </nav>
+    <main>
+        <div class="flex-box intro">
+            <h2 class='placeholder-image'>Image goes here</h2>
+            <p>Hello, I'm Rob Sweet. </p>
+            <p>I'm a full stack web developer who loves front end and back end development equally. I'm currently honing my skills in the MERN stack</p>
+        </div>
+        <div class="flex-box projects" id='projects'>
+            <h2>PROJECTS</h2>
+            <div class='flex-box project'>
+                <a class="project-link" href="http://bull-flagger.herokuapp.com/">
+                    <h3 class="project-title">Bull Flagger</h3>
+                </a>
+                <div class="flex-box project-box">
+                    <div class="flex-box project-specs">
+                        <p><b>Languages: </b>Javascript, JSX, Python, CSS</p>
+                        <p><b>Tools: </b>Material UI, React, BeautifulSoup, MongoDB, Mongoose, Express, Node.js</p>
+                        <p><b>Date: </b>May 2020 - July 2020</p>
+                    </div>
+                    <img class='screenshot' src="./assets/bull-flagger-2.PNG" alt="screenshot of bull-flagger, a stock filter website" />
+                </div>
+                <b>About the project: </b>
+                <p>
+                    The idea for bull-flagger came from a friend of mine who was always looking for trends in the stock market.
+                    He needed an app that could filter stocks based on their rate of consolidation in past months, and I told him I could make it happen.
+                    I learned how to use BeautifulSoup, and used it to scrape yahoo finances for past daily stock prices, and wrote a script that runs daily to scrape new data and put it in my database.
+                    I wrote the front end of the app in React, and have a backend node server running with express and mongoose that pulls stocks based on search criteria.
+                </p>
+            </div>
+            <div class='flex-box project'>
+                <a class="project-link" href="http://bull-flagger.herokuapp.com/">
+                    <h3 class="project-title">SMPL</h3>
+                </a>
+                <div class="flex-box project-box">
+                    <div class="flex-box project-specs">
+                        <p><b>Languages: </b>Javascript, JSX, CSS</p>
+                        <p><b>Tools: </b>React, Node.js, Express, MongoDB, Mongoose</p>
+                        <p><b>Date: </b>August 2020 - November 2020</p>
+                    </div>
+                    <img class='screenshot' src="./assets/SMPL.PNG" alt="screenshot of SMPL, an Image Board" />
+                </div>
+                <b>About the project: </b>
+                <p>
+                    I decided to make SMPL simply as a learning project. I figured I could make a website similar to 4chan, and wanted to see how I could get it done.
+                    For the front end I used React, and I decided to not use any UI libraries in order to strengthen my CSS skills. I used Node + express + mongoose as my backend.
+                    I used MongoDB for my database, and it was sufficient until I needed to start hosting images. I originally was storing them in the database as binary data, but after a bit of 
+                    reading on the subject realized that's not the best practice. I decided to store any files in an AWS S3 bucket, and store the key for the link to the photo in the corresponding
+                    databse document. The project is still ongoing, with most updates being optimizations and UI polishing.
+                </p>
+            </div>
+        </div>
+    </main>
+    <div id='lightbox'></div>
+</body>
