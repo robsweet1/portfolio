@@ -8,12 +8,54 @@
   <meta name='author' content='SitePoint'>
 
   <link rel='stylesheet' href='app.css'>
+  <link rel="shortcut icon" href="#" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <script defer src='lightbox.js'></script>
   <script defet src='navScroll.js'></script>
 
 </head>
 <body id='home'>
-    <nav class='flex-box nav' id='nav'>
+    <div class='homepage' id='homepage'>
+        <div class='title-card'>
+            <div class='name'>Robert Sweet</div>
+            <div class='profession'>Full Stack Developer</div>
+        </div>
+        <div class='contact-info'>
+            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>Email</a>
+            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>GitHub</a>
+            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>LinkedIn</a>
+            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>Resume</a>
+        </div>
+        <div class='next-page-link next'>
+            <a class='next-link' href='#project-page'>Projects</a>
+        </div>
+    </div>
+    <div class='project-page' id='project-page'>
+        <div class='next-page-link prev'>
+            <a class='next-link' href='#homepage'>Home</a>
+        </div>
+        <div class='row'>
+            <div class='project-holder'>
+                <img class='screenshot' src='./assets/bull-flagger-2.PNG' alt='screenshot of bull-flagger, a stock filter website' />
+                <h4>Bull-flagger</h4>
+                <h6>React, BeautifulSoup, MongoDB, Express | May 2020 - July 2020</h6>
+                <p>
+                    Bull-flagger is a stock screening app which allows the user to filter stocks by their monthly consolidation.
+                </p>
+            </div>
+            <div class='project-holder'>
+                <img class='screenshot' src='./assets/SMPL.PNG' alt='screenshot of SMPL, an Image Board' />
+                <h4>SMPL</h4>
+                <h6>React, Node.js, Express, MongoDB, Mongoose | August 2020 - November 2020</h6>
+                <p>
+                    SMPL is a simple image board which allows users to create threads, reply to threads, and upload images with each post.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id='lightbox'></div>
+    <!-- <nav class='flex-box nav' id='nav'>
         <h1 class='brand-logo'>Robert Sweet</h1>
         <div class='flex-box btn-container'>
             <a href='#home'>Home</a>
@@ -21,15 +63,15 @@
         </div>
     </nav>
     <main>
-        <div class='flex-box intro'>
+        <div class='flex-box content-box' id='intro'>
             <h2 class='placeholder-image'>Image goes here</h2>
             <p>Hello, I'm Rob Sweet. </p>
             <p>I'm a full stack web developer who loves front end and back end development equally. I'm currently honing my skills in the MERN stack</p>
         </div>
-        <div class='flex-box projects' id='projects'>
+        <div class='flex-box content-box' id='projects'>
             <h2>PROJECTS</h2>
             <div class='flex-box project'>
-                <a class='project-link' href='http://bull-flagger.herokuapp.com/'>
+                <a class='project-link' href='http://bull-flagger.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
                     <h3 class='project-title'>Bull Flagger</h3>
                 </a>
                 <div class='flex-box project-box'>
@@ -49,7 +91,7 @@
                 </p>
             </div>
             <div class='flex-box project'>
-                <a class='project-link' href='http://bull-flagger.herokuapp.com/'>
+                <a class='project-link' href='http://bull-flagger.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
                     <h3 class='project-title'>SMPL</h3>
                 </a>
                 <div class='flex-box project-box'>
@@ -74,5 +116,5 @@
             <h1>Get in touch</h1>
         </div>
     </main>
-    <div id='lightbox'></div>
+    <div id='lightbox'></div> -->
 </body>

@@ -2,13 +2,16 @@
 
 :root {
 --text-link : rgb(105, 105, 105);
---primary: rgb(255, 255, 255);
---secondary: rgb(207, 163, 163);
+--primary: #6794bf;
+--secondary: #afc7de;
+--tertiary: #d3e0ed;
 
 }
 
 html{
     scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -16,9 +19,9 @@ body {
 }
 
 a {
-    text-decoration: none;
+    /* text-decoration: none;
     color: var(--text-link);
-    height: 6vh;
+    height: 4vh;
     background-color: transparent;
     color: var(--text-link);
     cursor: pointer;
@@ -32,11 +35,11 @@ a {
     text-align: center;
     padding: 1px 6px;
     font: 400 13.3333px Arial;
-    font-size: 16px;
+    font-size: 16px; */
 }
 
 a:hover {
-    border-bottom: 1px solid rgb(105,105,105);
+    border-bottom: 1px solid var(--text-link);
 }
 
 b {
@@ -48,7 +51,28 @@ b {
     justify-content: center;
     align-items: center;
 }
+
+.content-box {
+    overflow: auto;
+    flex-direction: column;
+    background-color: var(--tertiary);
+    padding: 5% 5%;
+    margin: 2% 10%;
+    border: 1px var(--tertiary) solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.23), -1px -1px 5px rgba(0,0,0,0.23);
+}
+
+main{
+    background: #e7e7e7;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,.5) 8px, rgba(255,255,255,.5) 10px);
+    overflow: auto;
+}
+
 /* ----- navbar ----- */
+.brand-logo {
+    margin: 10px 0;
+}
 .nav {
     position: sticky;
     top: 0;
@@ -58,11 +82,11 @@ b {
     background-attachment: fixed;
     background-position: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.32), 0 6px 6px rgba(0,0,0,0.23);
-    transition: top 0.5s;
+    transition: top 1s;
 }
 
 .nav-hide {
-    top: -200px;
+    top: -100px;
 }
 
 .btn-container {
@@ -88,9 +112,7 @@ b {
 /* ----- intro ----- */
 
 .intro {
-    flex-direction: column;
-    padding: 5% 30%;
-    background-color: var(--secondary);
+
 }
 
 .placeholder-image {
@@ -99,14 +121,13 @@ b {
 }
 
 /* ----- project ----- */
+
+
 .projects {
-    flex-direction: column;
-    background-color: var(--primary);
-    padding: 5% 20%;
+
 }
 
 .project {
-    border-top: 2px solid var(--text-link);
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -142,7 +163,7 @@ b {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(228, 228, 228, 0.493);
+    background-color: var(--secondary);
     padding: 1vh;
     margin-right: 1%;
     width: 49%;
@@ -161,6 +182,11 @@ b {
 .screenshot {
     display: flex;
     width: 50%;
+}
+
+/* ----- contact ----- */
+.contact {
+    padding: 5% 20%;
 }
 /* ----- lightbox ----- */
 #lightbox {
@@ -187,4 +213,135 @@ b {
     image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+
+
+
+/*---NEW---*/
+
+h4, h5 {
+    color: #5d5d5d;
+    font-weight: 400;
+    line-height: 2em;
+    margin: -1em 0 0.2em 0;
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 0.85em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #787878;
+    margin: -0.4em 0 0.8em 0;
+}
+
+p {
+    margin: 0 0 5em 0;
+    color: #a2a2a2;
+}
+
+.homepage{
+    scroll-snap-align: start;
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.title-card {
+    color: #000;
+    margin: 15% 15% 0 7%;
+}
+
+.name {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.profession {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.contact-info {
+    margin-left: 7%;
+    margin-top: 7px;
+    width: 93%;
+    display: inline-block;
+}
+
+.contact-info > a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.next-page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    
+}
+
+.next {
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(white,gray);
+}
+
+.prev {
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(gray, black);
+}
+
+
+.next-link {
+    display: flex;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.info-link {
+    float: left;
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.project-page {
+    scroll-snap-align: start;
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 200px;
+}
+
+.project-holder {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    margin: 0 5%;
+}
+
+.project-holder > img {
+    width: 100%;
+    min-height: 60%;
+    margin-bottom: 20px;
 }
