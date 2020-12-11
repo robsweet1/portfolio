@@ -252,6 +252,25 @@ p {
     right: 0;
 }
 
+.mobile-link-container {
+    display: none;
+    width: 100px;
+}
+.mobile-link {
+    color: #d3d3d3;
+    font-weight: 400;
+    line-height: 2em;
+    margin: -1em 0 0.2em 0;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-link);
+}
+
+@media (max-width: 800px) {
+    .mobile-link-container{
+        display: block;
+    }
+}
 
 
 
