@@ -18,178 +18,8 @@ body {
     margin: 0!important;
 }
 
-a {
-    /* text-decoration: none;
-    color: var(--text-link);
-    height: 4vh;
-    background-color: transparent;
-    color: var(--text-link);
-    cursor: pointer;
-    border-radius: 0;
-    border: none;
-    outline: none;
-    padding-bottom: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 1px 6px;
-    font: 400 13.3333px Arial;
-    font-size: 16px; */
-}
-
-a:hover {
-    border-bottom: 1px solid var(--text-link);
-}
-
-b {
-    font-size: 18px;
-}
-
-.flex-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content-box {
-    overflow: auto;
-    flex-direction: column;
-    background-color: var(--tertiary);
-    padding: 5% 5%;
-    margin: 2% 10%;
-    border: 1px var(--tertiary) solid;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.23), -1px -1px 5px rgba(0,0,0,0.23);
-}
-
-main{
-    background: #e7e7e7;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,.5) 8px, rgba(255,255,255,.5) 10px);
-    overflow: auto;
-}
-
-/* ----- navbar ----- */
-.brand-logo {
-    margin: 10px 0;
-}
-.nav {
-    position: sticky;
-    top: 0;
-    justify-content: space-between;
-    background-color: var(--primary);
-    padding: 0.5% 10%;
-    background-attachment: fixed;
-    background-position: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.32), 0 6px 6px rgba(0,0,0,0.23);
-    transition: top 1s;
-}
-
-.nav-hide {
-    top: -100px;
-}
-
-.btn-container {
-    padding: 0 1%;
-}
-
-.btn {
-    height: 6vh;
-    background-color: transparent;
-    color: var(--text-link);
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 0;
-    border: none;
-    outline: none;
-    padding-bottom: 1px;
-}
-
-.btn:hover {
-    border-bottom: 1px solid rgb(105,105,105);
-}
-
-/* ----- intro ----- */
-
-.intro {
-
-}
-
-.placeholder-image {
-    height: 300px;
-    width: 200px;
-}
-
-/* ----- project ----- */
-
-
-.projects {
-
-}
-
-.project {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 2%;
-}
-
-.project p {
-    font-size: 18px;
-    display: block;
-    line-height: 1.7em;
-}
-
-.project-title {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.project-box {
-    height: 35vh;
-    align-items: flex-start;
-    margin-top: 3vh;
-}
-
-.project-box img {
-    cursor: pointer;
-    image-rendering: -moz-crisp-edges;         /* Firefox */
-    image-rendering: -o-crisp-edges;           /* Opera */
-    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-}
-.project-specs {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: var(--secondary);
-    padding: 1vh;
-    margin-right: 1%;
-    width: 49%;
-}
-
-.project-link {
-    text-decoration: none;
-    color: var(--text-link);
-    border-bottom: 1px solid transparent;
-}
-
-.project-link:hover {
-    border-bottom-color: var(--text-link);
-}
-
-.screenshot {
-    display: flex;
-    width: 50%;
-}
-
-/* ----- contact ----- */
-.contact {
-    padding: 5% 20%;
-}
 /* ----- lightbox ----- */
-#lightbox {
+/* #lightbox {
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -208,20 +38,16 @@ main{
 #lightbox-image {
     width: 60%;
     border: 10px groove rgb(196, 216, 202);
-    image-rendering: -moz-crisp-edges;         /* Firefox */
-    image-rendering: -o-crisp-edges;           /* Opera */
-    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: -moz-crisp-edges;         
+    image-rendering: -o-crisp-edges;           
+    image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-}
-
-
-
-
-/*---NEW---*/
+    -ms-interpolation-mode: nearest-neighbor;  
+} */
+/* PAGES */
 
 h4, h5 {
-    color: #5d5d5d;
+    color: #d3d3d3;
     font-weight: 400;
     line-height: 2em;
     margin: -1em 0 0.2em 0;
@@ -232,7 +58,7 @@ h6 {
     font-size: 0.85em;
     font-weight: 400;
     line-height: 1.5em;
-    color: #787878;
+    color: #acacac;
     margin: -0.4em 0 0.8em 0;
 }
 
@@ -275,6 +101,9 @@ p {
     text-decoration: none;
     color: var(--primary);
 }
+.contact-info > a:hover {
+    border-bottom: 1px solid var(--text-link);
+}
 
 .next-page-link {
     display: flex;
@@ -289,19 +118,26 @@ p {
     position: absolute;
     bottom: 0;
     background-image: linear-gradient(white,gray);
+    color: rgb(0, 0, 0);
 }
 
 .prev {
     position: absolute;
     top: 0;
     background-image: linear-gradient(gray, black);
+    color: rgb(255, 255, 255);
 }
 
 
 .next-link {
     display: flex;
     text-decoration: none;
-    color: var(--primary);
+    color: inherit;
+    font-size: 20px;
+}
+
+.next-link:hover {
+    border-bottom: 1px solid var(--text-link);
 }
 
 .info-link {
@@ -340,8 +176,85 @@ p {
     margin: 0 5%;
 }
 
-.project-holder > img {
-    width: 100%;
-    min-height: 60%;
-    margin-bottom: 20px;
+.screenshot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    height: 30vh;
 }
+
+.screenshot {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.bull {
+    background-image: url('./assets/bull-flagger.PNG');
+}
+
+.smpl {
+    background-image: url('./assets/SMPL.PNG')
+}
+
+.website-link {
+    margin: auto;
+    position: absolute;
+    visibility: hidden;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(44, 44, 44, 0.795);
+    /* border: 1px black solid; */
+    border-radius: 10px;
+    padding: 0.5% 1%;
+    /* transition: 0.5s; */
+    z-index: 10;
+}
+
+.screenshot:hover {
+    opacity: 0.3;
+}
+.screenshot-container:hover .website-link {
+    visibility: visible;
+}
+
+.website-link:hover + .screenshot{
+    opacity: 0.3;
+}
+
+.website-link:hover {
+    color:white;
+    background-color: black;
+}
+
+.website-link span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: padding-right 0.5s;
+}
+
+.website-link span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.website-link:hover span {
+    padding-right: 25px;
+}
+  
+.website-link:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+

@@ -11,41 +11,47 @@
   <link rel="shortcut icon" href="#" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  <script defer src='lightbox.js'></script>
-  <script defet src='navScroll.js'></script>
 
 </head>
 <body id='home'>
-    <div class='homepage' id='homepage'>
+    <div class='homepage' id='home'>
         <div class='title-card'>
             <div class='name'>Robert Sweet</div>
             <div class='profession'>Full Stack Developer</div>
         </div>
         <div class='contact-info'>
-            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>Email</a>
-            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>GitHub</a>
-            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>LinkedIn</a>
-            <a class='info-link' href='mailto:robertsweetjr@gmail.com'>Resume</a>
+            <a class='info-link' href='mailto:robertsweetjr@gmail.com' target="_blank">Email</a>
+            <a class='info-link' href='https://github.com/robsweet1' target="_blank">GitHub</a>
+            <a class='info-link' href='https://www.linkedin.com/in/robert-sweet-553864201' target="_blank">LinkedIn</a>
+            <a class='info-link' href='./assets/RobertSweetResume.pdf' target="_blank">Resume</a>
         </div>
         <div class='next-page-link next'>
-            <a class='next-link' href='#project-page'>Projects</a>
+            <a class='next-link' href='#projects'>Projects</a>
         </div>
     </div>
-    <div class='project-page' id='project-page'>
+    <div class='project-page' id='projects'>
         <div class='next-page-link prev'>
-            <a class='next-link' href='#homepage'>Home</a>
+            <a class='next-link' href='#home'>Home</a>
         </div>
         <div class='row'>
             <div class='project-holder'>
-                <img class='screenshot' src='./assets/bull-flagger-2.PNG' alt='screenshot of bull-flagger, a stock filter website' />
-                <h4>Bull-flagger</h4>
+                <div class='screenshot-container'>
+                    <a class='website-link' href='https://bull-flagger.herokuapp.com' target="_blank"><span>Visit</span></a>
+                    <div class='screenshot bull'></div>
+                </div>
+                <!-- <img class='screenshot' src='./assets/bull-flagger-2.PNG' alt='screenshot of bull-flagger, a stock filter website' /> -->
+                <h4>Bull-Flagger</h4>
                 <h6>React, BeautifulSoup, MongoDB, Express | May 2020 - July 2020</h6>
                 <p>
                     Bull-flagger is a stock screening app which allows the user to filter stocks by their monthly consolidation.
                 </p>
             </div>
             <div class='project-holder'>
-                <img class='screenshot' src='./assets/SMPL.PNG' alt='screenshot of SMPL, an Image Board' />
+                <div class='screenshot-container'>
+                    <a class='website-link' href='https://smpl-board.herokuapp.com/boards' target="_blank"><span>Visit</span></a>
+                    <div class='screenshot smpl'></div>
+                <!-- <img class='screenshot' src='./assets/SMPL.PNG' alt='screenshot of SMPL, an Image Board' /> -->
+                </div>
                 <h4>SMPL</h4>
                 <h6>React, Node.js, Express, MongoDB, Mongoose | August 2020 - November 2020</h6>
                 <p>
@@ -54,67 +60,4 @@
             </div>
         </div>
     </div>
-    <div id='lightbox'></div>
-    <!-- <nav class='flex-box nav' id='nav'>
-        <h1 class='brand-logo'>Robert Sweet</h1>
-        <div class='flex-box btn-container'>
-            <a href='#home'>Home</a>
-            <a href='#projects'>Projects</a>
-        </div>
-    </nav>
-    <main>
-        <div class='flex-box content-box' id='intro'>
-            <h2 class='placeholder-image'>Image goes here</h2>
-            <p>Hello, I'm Rob Sweet. </p>
-            <p>I'm a full stack web developer who loves front end and back end development equally. I'm currently honing my skills in the MERN stack</p>
-        </div>
-        <div class='flex-box content-box' id='projects'>
-            <h2>PROJECTS</h2>
-            <div class='flex-box project'>
-                <a class='project-link' href='http://bull-flagger.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-                    <h3 class='project-title'>Bull Flagger</h3>
-                </a>
-                <div class='flex-box project-box'>
-                    <div class='flex-box project-specs'>
-                        <p><b>Languages: </b>Javascript, JSX, Python, CSS</p>
-                        <p><b>Tools: </b>Material UI, React, BeautifulSoup, MongoDB, Mongoose, Express, Node.js</p>
-                        <p><b>Date: </b>May 2020 - July 2020</p>
-                    </div>
-                    <img class='screenshot' src='./assets/bull-flagger-2.PNG' alt='screenshot of bull-flagger, a stock filter website' />
-                </div>
-                <b>About the project: </b>
-                <p>
-                    The idea for bull-flagger came from a friend of mine who was always looking for trends in the stock market.
-                    He needed an app that could filter stocks based on their rate of consolidation in past months, and I told him I could make it happen.
-                    I learned how to use BeautifulSoup, and used it to scrape yahoo finances for past daily stock prices, and wrote a script that runs daily to scrape new data and put it in my database.
-                    I wrote the front end of the app in React, and have a backend node server running with express and mongoose that pulls stocks based on search criteria.
-                </p>
-            </div>
-            <div class='flex-box project'>
-                <a class='project-link' href='http://bull-flagger.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-                    <h3 class='project-title'>SMPL</h3>
-                </a>
-                <div class='flex-box project-box'>
-                    <div class='flex-box project-specs'>
-                        <p><b>Languages: </b>Javascript, JSX, CSS</p>
-                        <p><b>Tools: </b>React, Node.js, Express, MongoDB, Mongoose</p>
-                        <p><b>Date: </b>August 2020 - November 2020</p>
-                    </div>
-                    <img class='screenshot' src='./assets/SMPL.PNG' alt='screenshot of SMPL, an Image Board' />
-                </div>
-                <b>About the project: </b>
-                <p>
-                    I decided to make SMPL simply as a learning project. I figured I could make a website similar to 4chan, and wanted to see how I could get it done.
-                    For the front end I used React, and I decided to not use any UI libraries in order to strengthen my CSS skills. I used Node + express + mongoose as my backend.
-                    I used MongoDB for my database, and it was sufficient until I needed to start hosting images. I originally was storing them in the database as binary data, but after a bit of 
-                    reading on the subject realized that's not the best practice. I decided to store any files in an AWS S3 bucket, and store the key for the link to the photo in the corresponding
-                    databse document. The project is still ongoing, with most updates being optimizations and UI polishing.
-                </p>
-            </div>
-        </div>
-        <div class='flex-box contact'>
-            <h1>Get in touch</h1>
-        </div>
-    </main>
-    <div id='lightbox'></div> -->
 </body>
